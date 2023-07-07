@@ -1,0 +1,117 @@
+:root {
+    --bg-sedan: 31 77% 52%;
+    --bg-suvs: 184 100% 22%;
+    --bg-luxury: 179 100% 13%;
+
+    --clr-paragraph: 0 0% 100%;
+    --clr-btns: 0 0% 95%;
+
+    --fs-400: 'Lexend Deca', sans-serif;
+    --fs-700: 'Big Shoulders Display', cursive;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+body {
+    font-size: 15px;
+}
+
+.main {
+    margin: 2em 1em;
+    /* border: 2px solid red; */
+}
+
+.col {
+    padding: 1em 2em;
+}
+
+.col > * {
+    margin-block: 1em;
+    /* padding-inline: .5em; */
+}
+
+.col:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.col:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.col-sedans {
+    background-color: hsl(var(--bg-sedan));
+}
+
+.col-sedans > .btn {
+    color: hsl(var(--bg-sedan))
+}
+
+.col-suvs > .btn {
+    color: hsl(var(--bg-suvs))
+}
+
+.col-luxury > .btn {
+    color: hsl(var(--bg-luxury))
+}
+
+.col-suvs {
+    background-color: hsl(var(--bg-suvs));
+}
+
+.col-luxury {
+    background-color: hsl(var(--bg-luxury));
+}
+
+h1 {
+    font-family: var(--fs-700);
+}
+
+.title {
+    color: hsl(var(--clr-paragraph));
+}
+
+p {
+    font-family: var(--fs-400);
+    line-height: 1.5em;
+    color: hsl( var(--clr-paragraph) / .5);
+}
+
+.btn {
+    background-color: hsl(var(--clr-btns));
+    padding: .75em;
+    border-radius: 100px;
+    max-width: 80%;
+    border: none;
+}
+
+@media (min-width: 800px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col > * {
+        margin-block: 1em;
+        padding: .5em .75em;
+    }
+
+    .col:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .col:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+}
